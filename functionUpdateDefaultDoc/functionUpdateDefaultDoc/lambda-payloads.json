@@ -1,0 +1,268 @@
+{
+    "functionUpdateDefaultDoc": {
+        "lambda": {
+            "version": "0",
+            "id": "1a41ce24-d550-bb93-9680-2afcf2a7c476",
+            "detail-type": "AWS API Call via CloudTrail",
+            "source": "aws.ec2",
+            "account": "",
+            "time": "2018-02-24T14:45:26Z",
+            "region": "us-east-1",
+            "resources": [],
+            "detail": {
+                "eventVersion": "1.05",
+                "userIdentity": {
+                    "type": "Root",
+                    "principalId": "751611215147",
+                    "arn": "arn:aws:iam::751611215147:root",
+                    "accountId": "751611215147",
+                    "invokedBy": "autoscaling.amazonaws.com"
+                },
+                "eventTime": "2018-03-11T16:47:02Z",
+                "eventSource": "ec2.amazonaws.com",
+                "eventName": "RunInstances",
+                "awsRegion": "us-east-1",
+                "sourceIPAddress": "autoscaling.amazonaws.com",
+                "userAgent": "autoscaling.amazonaws.com",
+                "requestParameters": {
+                    "instancesSet": {
+                        "items": [
+                            {
+                                "imageId": "ami-906f61ea",
+                                "minCount": 1,
+                                "maxCount": 2,
+                                "keyName": "limliht"
+                            }
+                        ]
+                    },
+                    "groupSet": {
+                        "items": [
+                            {
+                                "groupId": "sg-76717505"
+                            }
+                        ]
+                    },
+                    "instanceType": "t2.micro",
+                    "blockDeviceMapping": {
+                        "items": [
+                            {
+                                "deviceName": "/dev/xvda",
+                                "ebs": {
+                                    "snapshotId": "snap-0554463addf9e0bae",
+                                    "volumeSize": 8,
+                                    "deleteOnTermination": true,
+                                    "volumeType": "gp2"
+                                }
+                            }
+                        ]
+                    },
+                    "availabilityZone": "us-east-1a",
+                    "monitoring": {
+                        "enabled": false
+                    },
+                    "subnetId": "subnet-b7509efc",
+                    "disableApiTermination": false,
+                    "clientToken": "64358857-d541-1942-b153-bf7d080a8a70_subnet-b7509efc_2",
+                    "iamInstanceProfile": {
+                        "name": "mng01-vir-infra-dxc"
+                    }
+                },
+                "responseElements": {
+                    "requestId": "33d888bf-596e-475c-80ba-1ee7a6a59c0f",
+                    "reservationId": "r-0c7bc322992a40e3e",
+                    "ownerId": "751611215147",
+                    "groupSet": {},
+                    "instancesSet": {
+                        "items": [
+                            {
+                                "instanceId": "i-052f59bc26302483a",
+                                "imageId": "ami-906f61ea",
+                                "instanceState": {
+                                    "code": 0,
+                                    "name": "pending"
+                                },
+                                "privateDnsName": "ip-172-31-16-147.ec2.internal",
+                                "keyName": "limliht",
+                                "amiLaunchIndex": 0,
+                                "productCodes": {},
+                                "instanceType": "t2.micro",
+                                "launchTime": 1520786822000,
+                                "placement": {
+                                    "availabilityZone": "us-east-1a",
+                                    "tenancy": "default"
+                                },
+                                "monitoring": {
+                                    "state": "disabled"
+                                },
+                                "subnetId": "subnet-b7509efc",
+                                "vpcId": "vpc-ed2edd95",
+                                "privateIpAddress": "172.31.16.147",
+                                "stateReason": {
+                                    "code": "pending",
+                                    "message": "pending"
+                                },
+                                "architecture": "x86_64",
+                                "rootDeviceType": "ebs",
+                                "rootDeviceName": "/dev/xvda",
+                                "blockDeviceMapping": {},
+                                "virtualizationType": "hvm",
+                                "hypervisor": "xen",
+                                "clientToken": "64358857-d541-1942-b153-bf7d080a8a70_subnet-b7509efc_2",
+                                "groupSet": {
+                                    "items": [
+                                        {
+                                            "groupId": "sg-76717505",
+                                            "groupName": "default"
+                                        }
+                                    ]
+                                },
+                                "sourceDestCheck": true,
+                                "networkInterfaceSet": {
+                                    "items": [
+                                        {
+                                            "networkInterfaceId": "eni-122ce20a",
+                                            "subnetId": "subnet-b7509efc",
+                                            "vpcId": "vpc-ed2edd95",
+                                            "ownerId": "751611215147",
+                                            "status": "in-use",
+                                            "macAddress": "0a:80:63:77:42:36",
+                                            "privateIpAddress": "172.31.16.147",
+                                            "privateDnsName": "ip-172-31-16-147.ec2.internal",
+                                            "sourceDestCheck": true,
+                                            "groupSet": {
+                                                "items": [
+                                                    {
+                                                        "groupId": "sg-76717505",
+                                                        "groupName": "default"
+                                                    }
+                                                ]
+                                            },
+                                            "attachment": {
+                                                "attachmentId": "eni-attach-42a2afed",
+                                                "deviceIndex": 0,
+                                                "status": "attaching",
+                                                "attachTime": 1520786822000,
+                                                "deleteOnTermination": true
+                                            },
+                                            "privateIpAddressesSet": {
+                                                "item": [
+                                                    {
+                                                        "privateIpAddress": "172.31.16.147",
+                                                        "privateDnsName": "ip-172-31-16-147.ec2.internal",
+                                                        "primary": true
+                                                    }
+                                                ]
+                                            },
+                                            "ipv6AddressesSet": {},
+                                            "tagSet": {}
+                                        }
+                                    ]
+                                },
+                                "iamInstanceProfile": {
+                                    "arn": "arn:aws:iam::751611215147:instance-profile/mng01-vir-infra-dxc",
+                                    "id": "AIPAJZQCC7K6J63QQVUTM"
+                                },
+                                "ebsOptimized": false
+                            },
+                            {
+                                "instanceId": "i-0c17c6328decc9333",
+                                "imageId": "ami-906f61ea",
+                                "instanceState": {
+                                    "code": 0,
+                                    "name": "pending"
+                                },
+                                "privateDnsName": "ip-172-31-31-213.ec2.internal",
+                                "keyName": "limliht",
+                                "amiLaunchIndex": 1,
+                                "productCodes": {},
+                                "instanceType": "t2.micro",
+                                "launchTime": 1520786822000,
+                                "placement": {
+                                    "availabilityZone": "us-east-1a",
+                                    "tenancy": "default"
+                                },
+                                "monitoring": {
+                                    "state": "disabled"
+                                },
+                                "subnetId": "subnet-b7509efc",
+                                "vpcId": "vpc-ed2edd95",
+                                "privateIpAddress": "172.31.31.213",
+                                "stateReason": {
+                                    "code": "pending",
+                                    "message": "pending"
+                                },
+                                "architecture": "x86_64",
+                                "rootDeviceType": "ebs",
+                                "rootDeviceName": "/dev/xvda",
+                                "blockDeviceMapping": {},
+                                "virtualizationType": "hvm",
+                                "hypervisor": "xen",
+                                "clientToken": "64358857-d541-1942-b153-bf7d080a8a70_subnet-b7509efc_2",
+                                "groupSet": {
+                                    "items": [
+                                        {
+                                            "groupId": "sg-76717505",
+                                            "groupName": "default"
+                                        }
+                                    ]
+                                },
+                                "sourceDestCheck": true,
+                                "networkInterfaceSet": {
+                                    "items": [
+                                        {
+                                            "networkInterfaceId": "eni-132ce20b",
+                                            "subnetId": "subnet-b7509efc",
+                                            "vpcId": "vpc-ed2edd95",
+                                            "ownerId": "751611215147",
+                                            "status": "in-use",
+                                            "macAddress": "0a:41:cc:3f:64:9a",
+                                            "privateIpAddress": "172.31.31.213",
+                                            "privateDnsName": "ip-172-31-31-213.ec2.internal",
+                                            "sourceDestCheck": true,
+                                            "groupSet": {
+                                                "items": [
+                                                    {
+                                                        "groupId": "sg-76717505",
+                                                        "groupName": "default"
+                                                    }
+                                                ]
+                                            },
+                                            "attachment": {
+                                                "attachmentId": "eni-attach-41a2afee",
+                                                "deviceIndex": 0,
+                                                "status": "attaching",
+                                                "attachTime": 1520786822000,
+                                                "deleteOnTermination": true
+                                            },
+                                            "privateIpAddressesSet": {
+                                                "item": [
+                                                    {
+                                                        "privateIpAddress": "172.31.31.213",
+                                                        "privateDnsName": "ip-172-31-31-213.ec2.internal",
+                                                        "primary": true
+                                                    }
+                                                ]
+                                            },
+                                            "ipv6AddressesSet": {},
+                                            "tagSet": {}
+                                        }
+                                    ]
+                                },
+                                "iamInstanceProfile": {
+                                    "arn": "arn:aws:iam::751611215147:instance-profile/mng01-vir-infra-dxc",
+                                    "id": "AIPAJZQCC7K6J63QQVUTM"
+                                },
+                                "ebsOptimized": false
+                            }
+                        ]
+                    },
+                    "requesterId": "226008221399"
+                },
+                "requestID": "33d888bf-596e-475c-80ba-1ee7a6a59c0f",
+                "eventID": "f9b93a34-6b6e-43f2-8084-88d30981af47",
+                "eventType": "AwsApiCall",
+                "recipientAccountId": "751611215147"
+            }
+        }
+    }
+}
