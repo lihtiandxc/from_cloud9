@@ -28,7 +28,7 @@ def get_account_ec2_list():
             construct_ec2_dict = {}
             construct_ec2_dict['id'] = ec2_id
             construct_ec2_dict['name'] = ec2_name['Value']
-            construct_ec2_dict['resource'] = 'ec2'
+            #construct_ec2_dict['resource'] = 'ec2'
             #print(construct_ec2_dict)
             construct_ec2_list.append(construct_ec2_dict)
             #print(construct_ec2_list)
@@ -63,7 +63,7 @@ def get_account_asg_list():
             construct_asg_dict = {}
             construct_asg_dict['id'] = resource_id_env
             construct_asg_dict['name'] = resource_id_env
-            construct_asg_dict['resource'] = 'asg'
+            #construct_asg_dict['resource'] = 'asg'
             #print(construct_asg_dict)
             construct_asg_list.append(construct_asg_dict)
     #print(construct_asg_list)

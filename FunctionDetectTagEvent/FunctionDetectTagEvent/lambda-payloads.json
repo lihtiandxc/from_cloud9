@@ -13,53 +13,46 @@
                 "eventVersion": "1.05",
                 "userIdentity": {
                     "type": "IAMUser",
-                    "principalId": "AIDAJ4PCHE2ISATSVFIUI",
+                    "principalId": "AIDAIGJ2ESVBYKHOM6EVA",
                     "arn": "arn:aws:iam::751611215147:user/limliht",
                     "accountId": "751611215147",
-                    "accessKeyId": "ASIAJ4XNMMJZGB4VAYRQ",
+                    "accessKeyId": "ASIAJG6UDRKQ2X5XNMDQ",
                     "userName": "limliht",
                     "sessionContext": {
                         "attributes": {
                             "mfaAuthenticated": "true",
-                            "creationDate": "2018-03-12T15:09:15Z"
+                            "creationDate": "2018-01-27T13:21:09Z"
                         }
-                    },
-                    "invokedBy": "signin.amazonaws.com"
+                    }
                 },
-                "eventTime": "2018-03-12T15:49:15Z",
-                "eventSource": "autoscaling.amazonaws.com",
-                "eventName": "CreateOrUpdateTags",
+                "eventTime": "2018-01-27T13:25:14Z",
+                "eventSource": "ec2.amazonaws.com",
+                "eventName": "CreateTags",
                 "awsRegion": "us-east-1",
-                "sourceIPAddress": "121.121.60.241",
-                "userAgent": "signin.amazonaws.com",
+                "sourceIPAddress": "35.168.85.120",
+                "userAgent": "aws-sdk-go/1.12.62 (go1.9.2; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.11.2",
                 "requestParameters": {
-                    "tags": [
-                        {
-                            "propagateAtLaunch": true,
-                            "key": "Env",
-                            "value": "productions",
-                            "resourceType": "auto-scaling-group",
-                            "resourceId": "limliht-asg"
-                        },
-                        {
-                            "propagateAtLaunch": true,
-                            "key": "Name",
-                            "value": "limliht-asgs",
-                            "resourceType": "auto-scaling-group",
-                            "resourceId": "limliht-asg"
-                        },
-                        {
-                            "propagateAtLaunch": true,
-                            "key": "Service",
-                            "value": "accounts",
-                            "resourceType": "auto-scaling-group",
-                            "resourceId": "limliht-asg"
-                        }
-                    ]
+                    "resourcesSet": {
+                        "items": [
+                            {
+                                "resourceId": "i-0b169b7138e7f8cd8"
+                            }
+                        ]
+                    },
+                    "tagSet": {
+                        "items": [
+                            {
+                                "key": "Service",
+                                "value": "account"
+                            }
+                        ]
+                    }
                 },
-                "responseElements": null,
-                "requestID": "ea96e281-260c-11e8-9837-5d3fac085e99",
-                "eventID": "dd672875-78e1-4e38-9453-90d2ae11e89f",
+                "responseElements": {
+                    "_return": true
+                },
+                "requestID": "26ce76de-0d2e-4363-ba53-ae0831084c58",
+                "eventID": "ab722ea0-1b6d-489c-993f-43a61e91c689",
                 "eventType": "AwsApiCall",
                 "recipientAccountId": "751611215147"
             }
