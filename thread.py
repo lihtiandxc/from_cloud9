@@ -1,6 +1,7 @@
 import time
-import multiprocessing
-from multiprocessing import Process, Pipe
+#import multiprocessing
+#from multiprocessing import Process, Pipe
+from threading import Thread
 import boto3
 import json
 
@@ -25,8 +26,8 @@ def read_asg_list_from_s3():
 if __name__ == "__main__":
     
     t1 = time.time()
-    p_read_ec2_list = Process(target=read_ec2_list_from_s3)
-    p_read_asg_lsit = Process(target=read_asg_list_from_s3)
+    p_read_ec2_list = Thread(target=read_ec2_list_from_s3)
+    p_read_asg_lsit = Thread(target=read_asg_list_from_s3)
     
     p_read_ec2_list.start()
     p_read_asg_lsit.start()
