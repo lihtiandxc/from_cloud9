@@ -1,0 +1,54 @@
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJEJA25VIXGG7N2SBG",
+        "arn": "arn:aws:iam::751611215147:user/dadimah",
+        "accountId": "751611215147",
+        "accessKeyId": "ASIAIQBXWMEJEY4HAVGA",
+        "userName": "dadimah",
+        "sessionContext": {
+            "attributes": {
+                "mfaAuthenticated": "true",
+                "creationDate": "2018-02-09T15:55:47Z"
+            }
+        },
+        "invokedBy": "signin.amazonaws.com"
+    },
+    "eventTime": "2018-02-09T16:17:36Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "TerminateInstances",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "175.139.107.228",
+    "userAgent": "signin.amazonaws.com",
+    "requestParameters": {
+        "instancesSet": {
+            "items": [
+                {
+                    "instanceId": "i-08aa45453b9edff66"
+                }
+            ]
+        }
+    },
+    "responseElements": {
+        "instancesSet": {
+            "items": [
+                {
+                    "instanceId": "i-08aa45453b9edff66",
+                    "currentState": {
+                        "code": 32,
+                        "name": "shutting-down"
+                    },
+                    "previousState": {
+                        "code": 16,
+                        "name": "running"
+                    }
+                }
+            ]
+        }
+    },
+    "requestID": "618228a9-2871-40da-9e0f-514231c0970f",
+    "eventID": "00411e6b-082a-4ab5-b0c7-8a60d386cd81",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "751611215147"
+}

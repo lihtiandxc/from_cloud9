@@ -1,0 +1,33 @@
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ4PCHE2ISATSVFIUI",
+        "arn": "arn:aws:iam::751611215147:user/limliht",
+        "accountId": "751611215147",
+        "accessKeyId": "ASIAJ6XXMQCOTDXKHKGQ",
+        "userName": "limliht",
+        "sessionContext": {
+            "attributes": {
+                "mfaAuthenticated": "true",
+                "creationDate": "2018-03-21T06:58:43Z"
+            }
+        },
+        "invokedBy": "signin.amazonaws.com"
+    },
+    "eventTime": "2018-03-21T09:47:50Z",
+    "eventSource": "autoscaling.amazonaws.com",
+    "eventName": "DeleteAutoScalingGroup",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "121.121.59.76",
+    "userAgent": "signin.amazonaws.com",
+    "requestParameters": {
+        "forceDelete": true,
+        "autoScalingGroupName": "limliht4-asg"
+    },
+    "responseElements": null,
+    "requestID": "eae7214d-2cec-11e8-9891-b59f5108b52e",
+    "eventID": "b49de072-e9d7-48c0-b6fb-a9537a381125",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "751611215147"
+}

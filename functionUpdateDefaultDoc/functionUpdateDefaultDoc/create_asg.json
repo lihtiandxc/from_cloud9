@@ -1,0 +1,69 @@
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ4PCHE2ISATSVFIUI",
+        "arn": "arn:aws:iam::751611215147:user/limliht",
+        "accountId": "751611215147",
+        "accessKeyId": "ASIAJ6XXMQCOTDXKHKGQ",
+        "userName": "limliht",
+        "sessionContext": {
+            "attributes": {
+                "mfaAuthenticated": "true",
+                "creationDate": "2018-03-21T06:58:43Z"
+            }
+        },
+        "invokedBy": "signin.amazonaws.com"
+    },
+    "eventTime": "2018-03-21T09:50:13Z",
+    "eventSource": "autoscaling.amazonaws.com",
+    "eventName": "CreateAutoScalingGroup",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "121.121.59.76",
+    "userAgent": "signin.amazonaws.com",
+    "requestParameters": {
+        "healthCheckGracePeriod": 300,
+        "desiredCapacity": 0,
+        "minSize": 0,
+        "launchConfigurationName": "limliht-lc",
+        "tags": [
+            {
+                "propagateAtLaunch": true,
+                "key": "Name",
+                "value": "limliht5-asg",
+                "resourceType": "auto-scaling-group",
+                "resourceId": "limliht5-asg"
+            },
+            {
+                "propagateAtLaunch": true,
+                "key": "Service",
+                "value": "account",
+                "resourceType": "auto-scaling-group",
+                "resourceId": "limliht5-asg"
+            },
+            {
+                "propagateAtLaunch": true,
+                "key": "Env",
+                "value": "production",
+                "resourceType": "auto-scaling-group",
+                "resourceId": "limliht5-asg"
+            },
+            {
+                "propagateAtLaunch": true,
+                "key": "Maintainer",
+                "value": "DXC",
+                "resourceType": "auto-scaling-group",
+                "resourceId": "limliht5-asg"
+            }
+        ],
+        "maxSize": 0,
+        "newInstancesProtectedFromScaleIn": false,
+        "vPCZoneIdentifier": "subnet-4e1c1f14,subnet-769b2d12",
+        "autoScalingGroupName": "limliht5-asg"
+    },
+    "responseElements": null,
+    "requestID": "40279feb-2ced-11e8-a0f4-ab4959237916",
+    "eventID": "905a0f68-5257-4b4d-9c5e-77b46e621b56",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "751611215147"
+}

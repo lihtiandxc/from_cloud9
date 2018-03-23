@@ -1,0 +1,164 @@
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "Root",
+        "principalId": "751611215147",
+        "arn": "arn:aws:iam::751611215147:root",
+        "accountId": "751611215147",
+        "invokedBy": "autoscaling.amazonaws.com"
+    },
+    "eventTime": "2018-03-10T15:15:09Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "RunInstances",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "autoscaling.amazonaws.com",
+    "userAgent": "autoscaling.amazonaws.com",
+    "requestParameters": {
+        "instancesSet": {
+            "items": [
+                {
+                    "imageId": "ami-906f61ea",
+                    "minCount": 1,
+                    "maxCount": 1,
+                    "keyName": "limliht"
+                }
+            ]
+        },
+        "groupSet": {
+            "items": [
+                {
+                    "groupId": "sg-76717505"
+                }
+            ]
+        },
+        "instanceType": "t2.micro",
+        "blockDeviceMapping": {
+            "items": [
+                {
+                    "deviceName": "/dev/xvda",
+                    "ebs": {
+                        "snapshotId": "snap-0554463addf9e0bae",
+                        "volumeSize": 8,
+                        "deleteOnTermination": true,
+                        "volumeType": "gp2"
+                    }
+                }
+            ]
+        },
+        "availabilityZone": "us-east-1f",
+        "monitoring": {
+            "enabled": false
+        },
+        "subnetId": "subnet-9f5c7e93",
+        "disableApiTermination": false,
+        "clientToken": "72358841-eb4c-69da-33ed-0ed29d6b8b7a_subnet-9f5c7e93_1",
+        "iamInstanceProfile": {
+            "name": "mng01-vir-infra-dxc"
+        }
+    },
+    "responseElements": {
+        "requestId": "afc58e8b-d7e8-4839-adba-0729b9c2c94e",
+        "reservationId": "r-0a23ef496d3bac267",
+        "ownerId": "751611215147",
+        "groupSet": {},
+        "instancesSet": {
+            "items": [
+                {
+                    "instanceId": "i-035465c863a4fba69",
+                    "imageId": "ami-906f61ea",
+                    "instanceState": {
+                        "code": 0,
+                        "name": "pending"
+                    },
+                    "privateDnsName": "ip-172-31-68-13.ec2.internal",
+                    "keyName": "limliht",
+                    "amiLaunchIndex": 0,
+                    "productCodes": {},
+                    "instanceType": "t2.micro",
+                    "launchTime": 1520694908000,
+                    "placement": {
+                        "availabilityZone": "us-east-1f",
+                        "tenancy": "default"
+                    },
+                    "monitoring": {
+                        "state": "disabled"
+                    },
+                    "subnetId": "subnet-9f5c7e93",
+                    "vpcId": "vpc-ed2edd95",
+                    "privateIpAddress": "172.31.68.13",
+                    "stateReason": {
+                        "code": "pending",
+                        "message": "pending"
+                    },
+                    "architecture": "x86_64",
+                    "rootDeviceType": "ebs",
+                    "rootDeviceName": "/dev/xvda",
+                    "blockDeviceMapping": {},
+                    "virtualizationType": "hvm",
+                    "hypervisor": "xen",
+                    "clientToken": "72358841-eb4c-69da-33ed-0ed29d6b8b7a_subnet-9f5c7e93_1",
+                    "groupSet": {
+                        "items": [
+                            {
+                                "groupId": "sg-76717505",
+                                "groupName": "default"
+                            }
+                        ]
+                    },
+                    "sourceDestCheck": true,
+                    "networkInterfaceSet": {
+                        "items": [
+                            {
+                                "networkInterfaceId": "eni-2894618d",
+                                "subnetId": "subnet-9f5c7e93",
+                                "vpcId": "vpc-ed2edd95",
+                                "ownerId": "751611215147",
+                                "status": "in-use",
+                                "macAddress": "16:92:35:14:d0:e4",
+                                "privateIpAddress": "172.31.68.13",
+                                "privateDnsName": "ip-172-31-68-13.ec2.internal",
+                                "sourceDestCheck": true,
+                                "groupSet": {
+                                    "items": [
+                                        {
+                                            "groupId": "sg-76717505",
+                                            "groupName": "default"
+                                        }
+                                    ]
+                                },
+                                "attachment": {
+                                    "attachmentId": "eni-attach-9a3be937",
+                                    "deviceIndex": 0,
+                                    "status": "attaching",
+                                    "attachTime": 1520694908000,
+                                    "deleteOnTermination": true
+                                },
+                                "privateIpAddressesSet": {
+                                    "item": [
+                                        {
+                                            "privateIpAddress": "172.31.68.13",
+                                            "privateDnsName": "ip-172-31-68-13.ec2.internal",
+                                            "primary": true
+                                        }
+                                    ]
+                                },
+                                "ipv6AddressesSet": {},
+                                "tagSet": {}
+                            }
+                        ]
+                    },
+                    "iamInstanceProfile": {
+                        "arn": "arn:aws:iam::751611215147:instance-profile/mng01-vir-infra-dxc",
+                        "id": "AIPAJZQCC7K6J63QQVUTM"
+                    },
+                    "ebsOptimized": false
+                }
+            ]
+        },
+        "requesterId": "226008221399"
+    },
+    "requestID": "afc58e8b-d7e8-4839-adba-0729b9c2c94e",
+    "eventID": "e20adbc3-ebba-4ac5-8a4d-3edd8f15b6ac",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "751611215147"
+}

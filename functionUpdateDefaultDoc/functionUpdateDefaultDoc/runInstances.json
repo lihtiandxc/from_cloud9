@@ -1,0 +1,207 @@
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJEJA25VIXGG7N2SBG",
+        "arn": "arn:aws:iam::751611215147:user/dadimah",
+        "accountId": "751611215147",
+        "accessKeyId": "ASIAIVKP3YZE6DH77WSA",
+        "userName": "dadimah",
+        "sessionContext": {
+            "attributes": {
+                "mfaAuthenticated": "true",
+                "creationDate": "2018-03-21T11:59:59Z"
+            }
+        },
+        "invokedBy": "signin.amazonaws.com"
+    },
+    "eventTime": "2018-03-21T12:02:37Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "RunInstances",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "15.211.146.21",
+    "userAgent": "signin.amazonaws.com",
+    "requestParameters": {
+        "instancesSet": {
+            "items": [
+                {
+                    "imageId": "ami-1853ac65",
+                    "minCount": 1,
+                    "maxCount": 1,
+                    "keyName": "sandbox-admin"
+                }
+            ]
+        },
+        "groupSet": {
+            "items": [
+                {
+                    "groupId": "sg-828ec3f4"
+                }
+            ]
+        },
+        "instanceType": "t2.micro",
+        "blockDeviceMapping": {
+            "items": [
+                {
+                    "deviceName": "/dev/xvda",
+                    "ebs": {
+                        "volumeSize": 8,
+                        "deleteOnTermination": true,
+                        "volumeType": "gp2"
+                    }
+                }
+            ]
+        },
+        "tenancy": "default",
+        "monitoring": {
+            "enabled": false
+        },
+        "disableApiTermination": false,
+        "instanceInitiatedShutdownBehavior": "stop",
+        "ebsOptimized": false,
+        "tagSpecificationSet": {
+            "items": [
+                {
+                    "resourceType": "instance",
+                    "tags": [
+                        {
+                            "key": "Name",
+                            "value": "Mahesh Jenkins"
+                        },
+                        {
+                            "key": "Owner",
+                            "value": "Mahesh"
+                        }
+                    ]
+                },
+                {
+                    "resourceType": "volume",
+                    "tags": [
+                        {
+                            "key": "Name",
+                            "value": "Mahesh Jenkins"
+                        },
+                        {
+                            "key": "Owner",
+                            "value": "Mahesh"
+                        }
+                    ]
+                }
+            ]
+        },
+        "creditSpecification": {
+            "cpuCredits": "standard"
+        }
+    },
+    "responseElements": {
+        "requestId": "c5a1d626-7077-4b5e-a33a-6513a7570774",
+        "reservationId": "r-0fd93a6a4681c90ee",
+        "ownerId": "751611215147",
+        "groupSet": {},
+        "instancesSet": {
+            "items": [
+                {
+                    "instanceId": "i-0d93be46ef75e96da",
+                    "imageId": "ami-1853ac65",
+                    "instanceState": {
+                        "code": 0,
+                        "name": "pending"
+                    },
+                    "privateDnsName": "ip-172-31-95-150.ec2.internal",
+                    "keyName": "sandbox-admin",
+                    "amiLaunchIndex": 0,
+                    "productCodes": {},
+                    "instanceType": "t2.micro",
+                    "launchTime": 1521633757000,
+                    "placement": {
+                        "availabilityZone": "us-east-1d",
+                        "tenancy": "default"
+                    },
+                    "monitoring": {
+                        "state": "disabled"
+                    },
+                    "subnetId": "subnet-a83b3584",
+                    "vpcId": "vpc-ed2edd95",
+                    "privateIpAddress": "172.31.95.150",
+                    "stateReason": {
+                        "code": "pending",
+                        "message": "pending"
+                    },
+                    "architecture": "x86_64",
+                    "rootDeviceType": "ebs",
+                    "rootDeviceName": "/dev/xvda",
+                    "blockDeviceMapping": {},
+                    "virtualizationType": "hvm",
+                    "hypervisor": "xen",
+                    "tagSet": {
+                        "items": [
+                            {
+                                "key": "Name",
+                                "value": "Mahesh Jenkins"
+                            },
+                            {
+                                "key": "Owner",
+                                "value": "Mahesh"
+                            }
+                        ]
+                    },
+                    "groupSet": {
+                        "items": [
+                            {
+                                "groupId": "sg-828ec3f4",
+                                "groupName": "Mahesh-SG"
+                            }
+                        ]
+                    },
+                    "sourceDestCheck": true,
+                    "networkInterfaceSet": {
+                        "items": [
+                            {
+                                "networkInterfaceId": "eni-ad7ca32c",
+                                "subnetId": "subnet-a83b3584",
+                                "vpcId": "vpc-ed2edd95",
+                                "ownerId": "751611215147",
+                                "status": "in-use",
+                                "macAddress": "12:63:c7:7a:8a:6a",
+                                "privateIpAddress": "172.31.95.150",
+                                "privateDnsName": "ip-172-31-95-150.ec2.internal",
+                                "sourceDestCheck": true,
+                                "groupSet": {
+                                    "items": [
+                                        {
+                                            "groupId": "sg-828ec3f4",
+                                            "groupName": "Mahesh-SG"
+                                        }
+                                    ]
+                                },
+                                "attachment": {
+                                    "attachmentId": "eni-attach-c3a53e0c",
+                                    "deviceIndex": 0,
+                                    "status": "attaching",
+                                    "attachTime": 1521633757000,
+                                    "deleteOnTermination": true
+                                },
+                                "privateIpAddressesSet": {
+                                    "item": [
+                                        {
+                                            "privateIpAddress": "172.31.95.150",
+                                            "privateDnsName": "ip-172-31-95-150.ec2.internal",
+                                            "primary": true
+                                        }
+                                    ]
+                                },
+                                "ipv6AddressesSet": {},
+                                "tagSet": {}
+                            }
+                        ]
+                    },
+                    "ebsOptimized": false
+                }
+            ]
+        }
+    },
+    "requestID": "c5a1d626-7077-4b5e-a33a-6513a7570774",
+    "eventID": "ecddfa76-67d7-4a4d-8901-1411c67a90d1",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "751611215147"
+}

@@ -1,0 +1,46 @@
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "Root",
+        "principalId": "751611215147",
+        "arn": "arn:aws:iam::751611215147:root",
+        "accountId": "751611215147",
+        "invokedBy": "autoscaling.amazonaws.com"
+    },
+    "eventTime": "2018-03-14T06:35:28Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "TerminateInstances",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "autoscaling.amazonaws.com",
+    "userAgent": "autoscaling.amazonaws.com",
+    "requestParameters": {
+        "instancesSet": {
+            "items": [
+                {
+                    "instanceId": "i-0f81b85d6e8df4788"
+                }
+            ]
+        }
+    },
+    "responseElements": {
+        "instancesSet": {
+            "items": [
+                {
+                    "instanceId": "i-0f81b85d6e8df4788",
+                    "currentState": {
+                        "code": 32,
+                        "name": "shutting-down"
+                    },
+                    "previousState": {
+                        "code": 16,
+                        "name": "running"
+                    }
+                }
+            ]
+        }
+    },
+    "requestID": "2d6b226a-c825-4754-b1c7-38936ccc738a",
+    "eventID": "b32a1a5a-5ed2-466a-b184-0a76de6376dd",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "751611215147"
+}

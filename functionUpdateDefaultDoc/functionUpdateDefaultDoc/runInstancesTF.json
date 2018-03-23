@@ -1,0 +1,182 @@
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAJ5QWKQGVEIE7D2NUI",
+        "arn": "arn:aws:iam::751611215147:user/limliht-prog",
+        "accountId": "751611215147",
+        "accessKeyId": "AKIAJ2T6GUR7HHFKL7XQ",
+        "userName": "limliht-prog"
+    },
+    "eventTime": "2018-03-11T16:59:42Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "RunInstances",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "35.168.85.120",
+    "userAgent": "aws-sdk-go/1.13.8 (go1.9.2; linux; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.11.3",
+    "requestParameters": {
+        "instancesSet": {
+            "items": [
+                {
+                    "imageId": "ami-97785bed",
+                    "minCount": 1,
+                    "maxCount": 1
+                }
+            ]
+        },
+        "instanceType": "t2.micro",
+        "blockDeviceMapping": {
+            "items": [
+                {
+                    "deviceName": "/dev/xvda",
+                    "ebs": {
+                        "volumeSize": 8,
+                        "deleteOnTermination": true,
+                        "volumeType": "gp2"
+                    }
+                }
+            ]
+        },
+        "monitoring": {
+            "enabled": false
+        },
+        "disableApiTermination": false,
+        "iamInstanceProfile": {},
+        "ebsOptimized": false,
+        "tagSpecificationSet": {
+            "items": [
+                {
+                    "resourceType": "instance",
+                    "tags": [
+                        {
+                            "key": "Env",
+                            "value": "production"
+                        },
+                        {
+                            "key": "Service",
+                            "value": "account"
+                        },
+                        {
+                            "key": "Name",
+                            "value": "itachi01-virtual-server"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "responseElements": {
+        "requestId": "97f8dbee-02ab-4c51-a516-174064d361c4",
+        "reservationId": "r-0fc482be69959d54c",
+        "ownerId": "751611215147",
+        "groupSet": {},
+        "instancesSet": {
+            "items": [
+                {
+                    "instanceId": "i-0b169b7138e7f8cd8",
+                    "imageId": "ami-97785bed",
+                    "instanceState": {
+                        "code": 0,
+                        "name": "pending"
+                    },
+                    "privateDnsName": "ip-172-31-35-120.ec2.internal",
+                    "amiLaunchIndex": 0,
+                    "productCodes": {},
+                    "instanceType": "t2.micro",
+                    "launchTime": 1520787581000,
+                    "placement": {
+                        "availabilityZone": "us-east-1b",
+                        "tenancy": "default"
+                    },
+                    "monitoring": {
+                        "state": "disabled"
+                    },
+                    "subnetId": "subnet-4e1c1f14",
+                    "vpcId": "vpc-ed2edd95",
+                    "privateIpAddress": "172.31.35.120",
+                    "stateReason": {
+                        "code": "pending",
+                        "message": "pending"
+                    },
+                    "architecture": "x86_64",
+                    "rootDeviceType": "ebs",
+                    "rootDeviceName": "/dev/xvda",
+                    "blockDeviceMapping": {},
+                    "virtualizationType": "hvm",
+                    "hypervisor": "xen",
+                    "tagSet": {
+                        "items": [
+                            {
+                                "key": "Name",
+                                "value": "itachi01-virtual-server"
+                            },
+                            {
+                                "key": "Env",
+                                "value": "production"
+                            },
+                            {
+                                "key": "Service",
+                                "value": "account"
+                            }
+                        ]
+                    },
+                    "groupSet": {
+                        "items": [
+                            {
+                                "groupId": "sg-76717505",
+                                "groupName": "default"
+                            }
+                        ]
+                    },
+                    "sourceDestCheck": true,
+                    "networkInterfaceSet": {
+                        "items": [
+                            {
+                                "networkInterfaceId": "eni-87f49156",
+                                "subnetId": "subnet-4e1c1f14",
+                                "vpcId": "vpc-ed2edd95",
+                                "ownerId": "751611215147",
+                                "status": "in-use",
+                                "macAddress": "0e:88:ab:f5:d0:88",
+                                "privateIpAddress": "172.31.35.120",
+                                "privateDnsName": "ip-172-31-35-120.ec2.internal",
+                                "sourceDestCheck": true,
+                                "groupSet": {
+                                    "items": [
+                                        {
+                                            "groupId": "sg-76717505",
+                                            "groupName": "default"
+                                        }
+                                    ]
+                                },
+                                "attachment": {
+                                    "attachmentId": "eni-attach-5e381c58",
+                                    "deviceIndex": 0,
+                                    "status": "attaching",
+                                    "attachTime": 1520787581000,
+                                    "deleteOnTermination": true
+                                },
+                                "privateIpAddressesSet": {
+                                    "item": [
+                                        {
+                                            "privateIpAddress": "172.31.35.120",
+                                            "privateDnsName": "ip-172-31-35-120.ec2.internal",
+                                            "primary": true
+                                        }
+                                    ]
+                                },
+                                "ipv6AddressesSet": {},
+                                "tagSet": {}
+                            }
+                        ]
+                    },
+                    "ebsOptimized": false
+                }
+            ]
+        }
+    },
+    "requestID": "97f8dbee-02ab-4c51-a516-174064d361c4",
+    "eventID": "4bafdf56-6e50-4c5b-a51f-141b20080d56",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "751611215147"
+}

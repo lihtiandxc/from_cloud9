@@ -1,8 +1,20 @@
+# ***Event :– (Trigger points to update List of Prod AccountPF instance ID and ASG resource ID) 
+# ASG or Non-ASG launched new instance/s with tagging Service:account and Env:production and Maintainer:DXC (RunInstances and eventsource :ec2)
+# ASG or Non-ASG terminated instance/s with tagging Service:account and Env:production and Maintainer:DXC (TerminateInstances and eventsource :ec2 or asg)
+# Create tags on instance that make instance/s fulfill tagging condition : Service:account and Env:production and Maintainer:DXC (CreateTags and eventsource :ec2 or asg)
+# (Notification will be generated) Delete tags on instance/s that make instance lost the tagging fulfillment condition : Service:account and Env:production and Maintainer:DXC
+# Create tags on ASG that make ASG fulfill tagging condition : Service:account and Env:production and Maintainer:DXC (createorUpdateTags)
+# (Notification will be generated) Delete tags on ASG that make ASG lost the tagging fulfillment condition : Service:account and Env:production and Maintainer:DXC
+# Delete ASG 
+# Create ASG
+
+
 import boto3
 import json
 import datetime
 import time
 import re
+import threading
 
 now = datetime.datetime.now()
 s3res = boto3.resource('s3')
@@ -12,20 +24,14 @@ current_month = str(now.month)
 current_day = str(now.day)
 aws_region = 'us-east-1'
 
-def evaluate_instanceId_owner(ec2id):
-    all_account_ec2 = ec2client.describe_instances(InstanceIds=[ec2id])
-    list_account_ec2 = all_account_ec2['Reservations']
-    for each_account_ec2 in list_account_ec2:
-        account_ec2 = each_account_ec2['Instances']
-        for each_account_ec2_id in account_ec2:
-            ec2_tags = each_account_ec2_id['Tags']
-            ec2_service = next(item for item in ec2_tags if item['Key'] == 'Service' )
-            ec2_env = next(item for item in ec2_tags if item['Key'] == 'Env')
-            if ec2_service['Value'] == 'account' and ec2_env['Value'] == 'production':
-                #print(ec2_service['Value'] + ' ' + ec2_env['Value'])
-                #print(ec2id)
-                return ec2id
-                #Call write2S3 function to update default document
+def check_ec2_tag():
+    pass
+
+def check_asg_tag():
+    pass
+
+def get_resource_id_from_e():
+    pass
                 
 #baseline tree structure
 #-baseline/default-config.json
@@ -34,21 +40,23 @@ def evaluate_instanceId_owner(ec2id):
 def update_to_s3_bucket():
     pass
 
+def read_list_from_s3():
+    pass
+
+def 
+
 def lambda_handler(event, context):
     #print(event)
-    # Wait for 60 seconds
+    # Wait for 15 seconds
     # This is to wait the Create Tags event happen for ASG runInstances.
     # This will help to ensure the Tags value fully populated
-    time.sleep(60)
+    time.sleep(15)
     
-    if event['detail']['eventName'] == 'RunInstances':
-        list_res_elements = event['detail']['responseElements']['instancesSet']['items']
-        #ec2regex = filter(r.match, list_res_elements)
-        #print(str(ec2regex))
-        for res_element in list_res_elements:
-             instanceId = res_element['instanceId']
-             result = evaluate_instanceId_owner(instanceId)
-            
-    #obj = s3res.Object('limliht-config','config/'+aws_region+'/'+current_month+'/'+current_day+'/RunInstancesByASG.json')
-    #obj.put(Body=json.dumps(event))
+    e_name = event['detail']['eventName']
+    e_source = event['detail']['eventSource']
+    e_requestParameters = event['detail']['requestParameters']
+    
+    if e_name == 'RunInstances':
+           
+
     return 'Complete'
